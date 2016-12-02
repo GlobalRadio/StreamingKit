@@ -61,11 +61,20 @@
 
 -(void) audioPlayerViewPlayFromHTTPSelected:(AudioPlayerView*)audioPlayerView
 {
-    NSURL* url = [NSURL URLWithString:@"file:///Users/tum/Temp/airplane-cut.aac"];
+    NSURL* url = [NSURL URLWithString:@"http://www.abstractpath.com/files/audiosamples/sample.mp3"];
     
     STKDataSource* dataSource = [STKAudioPlayer dataSourceFromURL:url];
     
 	[audioPlayer setDataSource:dataSource withQueueItemId:[[SampleQueueId alloc] initWithUrl:url andCount:0]];
+}
+
+-(void) audioPlayerViewPlayFromIcecastSelected:(AudioPlayerView *)audioPlayerView
+{
+    NSURL* url = [NSURL URLWithString:@"http://shoutmedia.abc.net.au:10326"];
+    
+    STKDataSource* dataSource = [STKAudioPlayer dataSourceFromURL:url];
+    
+    [audioPlayer setDataSource:dataSource withQueueItemId:[[SampleQueueId alloc] initWithUrl:url andCount:0]];
 }
 
 -(void) audioPlayerViewQueueShortFileSelected:(AudioPlayerView*)audioPlayerView

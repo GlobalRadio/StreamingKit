@@ -37,6 +37,7 @@
 
 #import <Foundation/Foundation.h>
 #import <pthread.h>
+#import "STKConstants.h"
 #import "STKDataSource.h"
 #import <AudioToolbox/AudioToolbox.h>
 
@@ -168,6 +169,13 @@ typedef void(^STKFrameFilter)(UInt32 channelsPerFrame, UInt32 bytesPerFrame, UIn
 /// URLs with HTTP schemes will return an STKHTTPDataSource wrapped within an STKAutoRecoveringHTTPDataSource.
 /// URLs with unrecognised schemes will return nil.
 +(STKDataSource*) dataSourceFromURL:(NSURL*)url;
+
+// Data source that supports changing its URL in the middle of playback
+// NOTE: Only supports http/https URLs
++(STKDataSource*) dataSourceWithChangableURLFromInitialURL:(NSURL*)url;
+
+/// Creates a datasource from a URL that can provide embedded metadata.
++(STKDataSource*) dataSourceWithMetadataFromURL:(NSURL*)url httpRequestHeaders:(NSDictionary *)requestHeaders;
 
 /// Initializes a new STKAudioPlayer with the default options
 -(id) init;

@@ -1,10 +1,11 @@
-/**********************************************************************************
- AudioPlayer.m
+/******************************************************************************
+ STKHTTPMetadataSource.h
+ StreamingKit
  
- Created by Thong Nguyen on 14/05/2012.
+ Created by James Gordon on 21/08/2014.
  https://github.com/tumtumtum/audjustable
  
- Copyright (c) 2012 Thong Nguyen (tumtumtum@gmail.com). All rights reserved.
+ Copyright (c) 2014 Thong Nguyen (tumtumtum@gmail.com). All rights reserved.
  
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
@@ -30,31 +31,34 @@
  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- **********************************************************************************/
+ ******************************************************************************/
 
-#import "STKCoreFoundationDataSource.h"
+#define METADATA_LENGTH_MULTIPLY_FACTOR 16
+#define METADATA_INTERVAL_CHAR 1
+#define KEY_ICECAST_METADATA_INT @"icy-metaint"
+#define KEY_ICECAST_BITRATE @"icy-br"
+#define ICECAST_BITRATE_SEPARATOR @", "
+#define METADATA_PARSE_QUEUE "metadata_parse_queue"
 
-@class STKHTTPDataSource;
+#import "STKHTTPDataSource.h"
 
-typedef void(^STKURLBlock)(NSURL* url);
-typedef NSURL*(^STKURLProvider)();
-typedef void(^STKAsyncURLProvider)(STKHTTPDataSource* dataSource, BOOL forSeek, STKURLBlock callback);
+@protocol STKHTTPMetadataSoureceDelegate <NSObject>
 
-@interface STKHTTPDataSource : STKCoreFoundationDataSource {
-    @protected
-        SInt64 requestedStartOffset;
-        STKAsyncURLProvider asyncUrlProvider;
-}
+- (void)didStartReceive;
+- (void)didReceive:(NSData *)metadata at:(SInt64)frame;
 
-@property (readonly, retain) NSURL* url;
-@property (readonly) UInt32 httpStatusCode;
+@end
 
-+(AudioFileTypeID) audioFileTypeHintFromMimeType:(NSString*)fileExtension;
--(id) initWithURL:(NSURL*)url;
--(id) initWithURL:(NSURL *)url httpRequestHeaders:(NSDictionary *)httpRequestHeaders;
--(id) initWithURLProvider:(STKURLProvider)urlProvider;
--(id) initWithAsyncURLProvider:(STKAsyncURLProvider)asyncUrlProvider;
--(NSRunLoop*) eventsRunLoop;
--(void) reconnect;
+
+@interface STKHTTPMetadataSource : STKHTTPDataSource
+
+// Sample frequency in Hz
+@property (nonatomic) float sampleRate;
+
+// Use this to determine what frame we're on based on the number of bytes read.
+@property (nonatomic) float decompressedBitsPerFrame;
+
+// Who to alert when we receive some metadata.
+@property (nonatomic) id<STKHTTPMetadataSoureceDelegate> metadataDelegate;
 
 @end

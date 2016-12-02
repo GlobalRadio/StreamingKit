@@ -357,12 +357,12 @@ static void PopulateOptionsWithDefault(STKAutoRecoveringHTTPDataSourceOptions* o
 
 -(void) dataSourceEof:(STKDataSource*)dataSource
 {
-	NSLog(@"dataSourceEof");
-	
-    if ([self position] < [self length])
+    NSLog(@"dataSourceEof");
+    
+    const bool retryBecauseTheStreamSeemsTruncated = [self position] < [self length];
+    if(retryBecauseTheStreamSeemsTruncated)
     {
         [self processRetryOnError];
-        
         return;
     }
     
@@ -371,15 +371,22 @@ static void PopulateOptionsWithDefault(STKAutoRecoveringHTTPDataSourceOptions* o
 
 -(void) dataSourceErrorOccured:(STKDataSource*)dataSource
 {
-    NSLog(@"dataSourceErrorOccured");
+    const UInt32 httpStatusCode = self.innerDataSource.httpStatusCode;
+    const bool isRetryableStatus = httpStatusCode >= 200 && httpStatusCode < 300;
     
-    if (self.innerDataSource.httpStatusCode == 416 /* Range out of bounds */)
+    NSLog(@"Error on source %@ with http status %@ – will %@.", dataSource, @(httpStatusCode), isRetryableStatus ? @"retry" : @"fail");
+    
+    if(isRetryableStatus)
     {
-        [super dataSourceEof:dataSource];
+        [self processRetryOnError];
     }
     else
     {
-        [self processRetryOnError];
+        // The super call here is intentional. The self method is overloaded
+        // to attempt a retry if the stream seems to be truncated. The super
+        // method implements default handling that will send the delegate an
+        // eof.
+        [super dataSourceEof: dataSource];
     }
 }
 

@@ -35,6 +35,8 @@
 #import "STKAudioPlayer.h"
 #import "AudioToolbox/AudioToolbox.h"
 #import "STKHTTPDataSource.h"
+#import "STKAdaptiveURLHTTPDataSource.h"
+#import "STKHTTPMetadataSource.h"
 #import "STKAutoRecoveringHTTPDataSource.h"
 #import "STKLocalFileDataSource.h"
 #import "STKQueueEntry.h"
@@ -42,26 +44,10 @@
 #import "libkern/OSAtomic.h"
 #import <float.h>
 
-#ifndef DBL_MAX
-#define DBL_MAX 1.7976931348623157e+308
-#endif
-
 #pragma mark Defines
 
 #define kOutputBus 0
 #define kInputBus 1
-
-#define STK_DBMIN (-60)
-#define STK_DBOFFSET (-74.0)
-#define STK_LOWPASSFILTERTIMESLICE (0.0005)
-
-#define STK_DEFAULT_PCM_BUFFER_SIZE_IN_SECONDS (10)
-#define STK_DEFAULT_SECONDS_REQUIRED_TO_START_PLAYING (1)
-#define STK_DEFAULT_SECONDS_REQUIRED_TO_START_PLAYING_AFTER_BUFFER_UNDERRUN (7.5)
-#define STK_MAX_COMPRESSED_PACKETS_FOR_BITRATE_CALCULATION (4096)
-#define STK_DEFAULT_READ_BUFFER_SIZE (64 * 1024)
-#define STK_DEFAULT_PACKET_BUFFER_SIZE (2048)
-#define STK_DEFAULT_GRACE_PERIOD_AFTER_SEEK_SECONDS (0.5)
 
 #define LOGINFO(x) [self logInfo:[NSString stringWithFormat:@"%s %@", sel_getName(_cmd), x]];
 
@@ -294,7 +280,7 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
         .componentFlagsMask = 0
 	};
     
-    const int bytesPerSample = sizeof(AudioSampleType);
+    const int bytesPerSample = 2;
     
     canonicalAudioStreamBasicDescription = (AudioStreamBasicDescription)
     {
@@ -628,6 +614,35 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
     
     return retval;
 }
+
++(STKDataSource*) dataSourceWithChangableURLFromInitialURL:(NSURL*)url {
+    
+    STKDataSource *retval = nil;
+    
+    if ([url.scheme caseInsensitiveCompare:@"http"] == NSOrderedSame || [url.scheme caseInsensitiveCompare:@"https"] == NSOrderedSame)
+    {
+        retval = [[STKAutoRecoveringHTTPDataSource alloc] initWithHTTPDataSource:[[STKAdaptiveURLHTTPDataSource alloc] initWithURL:url]];
+    }
+    
+    return retval;
+}
+
++(STKDataSource*) dataSourceWithMetadataFromURL:(NSURL*)url httpRequestHeaders:(NSDictionary *)requestHeaders
+{
+    STKDataSource* retval = nil;
+    
+    if ([url.scheme caseInsensitiveCompare:@"http"] == NSOrderedSame || [url.scheme caseInsensitiveCompare:@"https"] == NSOrderedSame)
+    {
+        STKHTTPMetadataSource *metadataSource = [[STKHTTPMetadataSource alloc] initWithURL:url httpRequestHeaders:requestHeaders];
+        metadataSource.sampleRate = canonicalAudioStreamBasicDescription.mSampleRate;
+        metadataSource.decompressedBitsPerFrame = canonicalAudioStreamBasicDescription.mBytesPerFrame * 8;
+        
+        retval = [[STKAutoRecoveringHTTPDataSource alloc] initWithHTTPDataSource:metadataSource];
+    }
+    
+    return retval;
+}
+
 
 -(void) clearQueue
 {
@@ -1868,7 +1883,7 @@ static BOOL GetHardwareCodecClassDesc(UInt32 formatId, AudioClassDescription* cl
 {
     OSStatus status;
     Boolean writable;
-	UInt32 cookieSize;
+    UInt32 cookieSize = 0;
     
     if (memcmp(asbd, &audioConverterAudioStreamBasicDescription, sizeof(AudioStreamBasicDescription)) == 0)
     {
@@ -1900,11 +1915,16 @@ static BOOL GetHardwareCodecClassDesc(UInt32 formatId, AudioClassDescription* cl
 
     audioConverterAudioStreamBasicDescription = *asbd;
     
-	status = AudioFileStreamGetPropertyInfo(audioFileStream, kAudioFileStreamProperty_MagicCookieData, &cookieSize, &writable);
+    if (self->currentlyReadingEntry.dataSource.audioFileTypeHint != kAudioFileAAC_ADTSType)
+    {
+        status = AudioFileStreamGetPropertyInfo(audioFileStream, kAudioFileStreamProperty_MagicCookieData, &cookieSize, &writable);
     
-	if (!status)
-	{
-    	void* cookieData = alloca(cookieSize);
+        if (status)
+        {
+            return;
+        }
+        
+        void* cookieData = alloca(cookieSize);
         
         status = AudioFileStreamGetProperty(audioFileStream, kAudioFileStreamProperty_MagicCookieData, &cookieSize, cookieData);
         
@@ -1917,6 +1937,8 @@ static BOOL GetHardwareCodecClassDesc(UInt32 formatId, AudioClassDescription* cl
         
         if (status)
         {
+            [self unexpectedError:STKAudioPlayerErrorAudioSystemError];
+            
             return;
         }
     }
@@ -2245,15 +2267,6 @@ static BOOL GetHardwareCodecClassDesc(UInt32 formatId, AudioClassDescription* cl
     stopReason = stopReasonIn;
     self.internalState = STKAudioPlayerInternalStateStopped;
 }
-
-typedef struct
-{
-    BOOL done;
-    UInt32 numberOfPackets;
-    AudioBuffer audioBuffer;
-    AudioStreamPacketDescription* packetDescriptions;
-}
-AudioConvertInfo;
 
 OSStatus AudioConverterCallback(AudioConverterRef inAudioConverter, UInt32* ioNumberDataPackets, AudioBufferList* ioData, AudioStreamPacketDescription **outDataPacketDescription, void* inUserData)
 {
@@ -2725,7 +2738,7 @@ static OSStatus OutputRenderCallback(void* inRefCon, AudioUnitRenderActionFlags*
 		}
     }
 
-	if (frameFilters)
+	if (frameFilters && 0 != totalFramesCopied)
 	{
 		NSUInteger count = frameFilters.count;
 		AudioStreamBasicDescription asbd = canonicalAudioStreamBasicDescription;

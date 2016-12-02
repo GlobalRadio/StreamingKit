@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5207071A374BCD00523C31 /* STKMixableQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A5207051A374BCD00523C31 /* STKMixableQueueEntry.h */; };
+		1A5207081A374BCD00523C31 /* STKMixableQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5207061A374BCD00523C31 /* STKMixableQueueEntry.m */; };
+		1ACC25D119A6288E00F6B2A7 /* STKEventScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACC25CF19A6288E00F6B2A7 /* STKEventScheduler.h */; };
+		1ACC25D219A6288E00F6B2A7 /* STKEventScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC25D019A6288E00F6B2A7 /* STKEventScheduler.m */; };
+		1ACC25D319A6288E00F6B2A7 /* STKEventScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC25D019A6288E00F6B2A7 /* STKEventScheduler.m */; };
+		1ACC25D819A64AA500F6B2A7 /* STKHTTPMetadataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACC25D619A64AA500F6B2A7 /* STKHTTPMetadataSource.h */; };
+		1ACC25D919A64AA500F6B2A7 /* STKHTTPMetadataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC25D719A64AA500F6B2A7 /* STKHTTPMetadataSource.m */; };
+		1ADB86A91BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADB86A71BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.h */; };
+		1ADB86AA1BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB86A81BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.m */; };
+		1AEF08011A37448E00FFFA8F /* STKQueueMixer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AEF07FF1A37448E00FFFA8F /* STKQueueMixer.h */; };
+		1AEF08021A37448E00FFFA8F /* STKQueueMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF08001A37448E00FFFA8F /* STKQueueMixer.m */; };
+		5B949CD21A1140E4005675A0 /* STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F1188D5E550010896F /* STKAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B949CD31A1140E4005675A0 /* STKAutoRecoveringHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F3188D5E550010896F /* STKAutoRecoveringHTTPDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B949CD41A1140E4005675A0 /* STKCoreFoundationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F5188D5E550010896F /* STKCoreFoundationDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B949CD51A1140E4005675A0 /* STKDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F7188D5E550010896F /* STKDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B949CD61A1140E4005675A0 /* STKDataSourceWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F9188D5E550010896F /* STKDataSourceWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B949CD71A1140E4005675A0 /* STKHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4FB188D5E550010896F /* STKHTTPDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B949CD81A1140E4005675A0 /* STKLocalFileDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4FD188D5E550010896F /* STKLocalFileDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B949CD91A1140E4005675A0 /* STKQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = A1BF65D0189A6582004DD08C /* STKQueueEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1A4996B189E744400E2A2E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A4996A189E744400E2A2E2 /* Cocoa.framework */; };
 		A1A49975189E744500E2A2E2 /* StreamingKitMac.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A49974189E744500E2A2E2 /* StreamingKitMac.m */; };
 		A1A4997B189E744500E2A2E2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E7C4D9188D57F60010896F /* XCTest.framework */; };
@@ -83,6 +102,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A5207051A374BCD00523C31 /* STKMixableQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKMixableQueueEntry.h; sourceTree = "<group>"; };
+		1A5207061A374BCD00523C31 /* STKMixableQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKMixableQueueEntry.m; sourceTree = "<group>"; };
+		1AC30E121A385ACB002AA3D5 /* STKConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STKConstants.h; sourceTree = "<group>"; };
+		1ACC25CF19A6288E00F6B2A7 /* STKEventScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKEventScheduler.h; sourceTree = "<group>"; };
+		1ACC25D019A6288E00F6B2A7 /* STKEventScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKEventScheduler.m; sourceTree = "<group>"; };
+		1ACC25D619A64AA500F6B2A7 /* STKHTTPMetadataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKHTTPMetadataSource.h; sourceTree = "<group>"; };
+		1ACC25D719A64AA500F6B2A7 /* STKHTTPMetadataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKHTTPMetadataSource.m; sourceTree = "<group>"; };
+		1ADB86A71BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAdaptiveURLHTTPDataSource.h; sourceTree = "<group>"; };
+		1ADB86A81BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAdaptiveURLHTTPDataSource.m; sourceTree = "<group>"; };
+		1ADB86AE1BA045AB00AAF484 /* STKHTTPDataSourceProtected.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STKHTTPDataSourceProtected.h; sourceTree = "<group>"; };
+		1AEF07FF1A37448E00FFFA8F /* STKQueueMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueMixer.h; sourceTree = "<group>"; };
+		1AEF08001A37448E00FFFA8F /* STKQueueMixer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueMixer.m; sourceTree = "<group>"; };
 		A1A49969189E744400E2A2E2 /* libStreamingKitMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStreamingKitMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A4996A189E744400E2A2E2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		A1A4996D189E744500E2A2E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -262,6 +293,7 @@
 		A1E7C4CD188D57F50010896F /* StreamingKit */ = {
 			isa = PBXGroup;
 			children = (
+				A1E7C4CE188D57F50010896F /* Supporting Files */,
 				A1E7C4F1188D5E550010896F /* STKAudioPlayer.h */,
 				A1E7C4F2188D5E550010896F /* STKAudioPlayer.m */,
 				A1E7C4F3188D5E550010896F /* STKAutoRecoveringHTTPDataSource.h */,
@@ -274,13 +306,24 @@
 				A1E7C4FA188D5E550010896F /* STKDataSourceWrapper.m */,
 				A1E7C4FB188D5E550010896F /* STKHTTPDataSource.h */,
 				A1E7C4FC188D5E550010896F /* STKHTTPDataSource.m */,
+				1ACC25D619A64AA500F6B2A7 /* STKHTTPMetadataSource.h */,
+				1ACC25D719A64AA500F6B2A7 /* STKHTTPMetadataSource.m */,
 				A1E7C4FD188D5E550010896F /* STKLocalFileDataSource.h */,
 				A1E7C4FE188D5E550010896F /* STKLocalFileDataSource.m */,
 				A1BF65D0189A6582004DD08C /* STKQueueEntry.h */,
 				A1BF65D1189A6582004DD08C /* STKQueueEntry.m */,
+				1ACC25CF19A6288E00F6B2A7 /* STKEventScheduler.h */,
+				1ACC25D019A6288E00F6B2A7 /* STKEventScheduler.m */,
 				A1BF65D3189A65C6004DD08C /* NSMutableArray+STKAudioPlayer.h */,
 				A1BF65D4189A65C6004DD08C /* NSMutableArray+STKAudioPlayer.m */,
-				A1E7C4CE188D57F50010896F /* Supporting Files */,
+				1AEF07FF1A37448E00FFFA8F /* STKQueueMixer.h */,
+				1AEF08001A37448E00FFFA8F /* STKQueueMixer.m */,
+				1A5207051A374BCD00523C31 /* STKMixableQueueEntry.h */,
+				1A5207061A374BCD00523C31 /* STKMixableQueueEntry.m */,
+				1AC30E121A385ACB002AA3D5 /* STKConstants.h */,
+				1ADB86A71BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.h */,
+				1ADB86A81BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.m */,
+				1ADB86AE1BA045AB00AAF484 /* STKHTTPDataSourceProtected.h */,
 			);
 			path = StreamingKit;
 			sourceTree = "<group>";
@@ -314,10 +357,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5B949CD11A1140CF005675A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B949CD21A1140E4005675A0 /* STKAudioPlayer.h in Headers */,
+				1AEF08011A37448E00FFFA8F /* STKQueueMixer.h in Headers */,
+				5B949CD31A1140E4005675A0 /* STKAutoRecoveringHTTPDataSource.h in Headers */,
+				1A5207071A374BCD00523C31 /* STKMixableQueueEntry.h in Headers */,
+				5B949CD41A1140E4005675A0 /* STKCoreFoundationDataSource.h in Headers */,
+				5B949CD51A1140E4005675A0 /* STKDataSource.h in Headers */,
+				5B949CD61A1140E4005675A0 /* STKDataSourceWrapper.h in Headers */,
+				5B949CD71A1140E4005675A0 /* STKHTTPDataSource.h in Headers */,
+				1ADB86A91BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.h in Headers */,
+				5B949CD81A1140E4005675A0 /* STKLocalFileDataSource.h in Headers */,
+				5B949CD91A1140E4005675A0 /* STKQueueEntry.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1A49967189E744400E2A2E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACC25D119A6288E00F6B2A7 /* STKEventScheduler.h in Headers */,
+				1ACC25D819A64AA500F6B2A7 /* STKHTTPMetadataSource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +429,7 @@
 				A1E7C4C4188D57F50010896F /* Sources */,
 				A1E7C4C5188D57F50010896F /* Frameworks */,
 				A1E7C4C6188D57F50010896F /* CopyFiles */,
+				5B949CD11A1140CF005675A0 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -401,7 +465,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = STK;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Thong Nguyen";
 			};
 			buildConfigurationList = A1E7C4C3188D57F50010896F /* Build configuration list for PBXProject "StreamingKit" */;
@@ -477,6 +541,7 @@
 				A1A49995189E746B00E2A2E2 /* STKLocalFileDataSource.m in Sources */,
 				A1A49997189E747000E2A2E2 /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				A1A4998E189E745900E2A2E2 /* STKAudioPlayer.m in Sources */,
+				1ACC25D319A6288E00F6B2A7 /* STKEventScheduler.m in Sources */,
 				A1A49993189E746500E2A2E2 /* STKDataSourceWrapper.m in Sources */,
 				A1A49992189E746300E2A2E2 /* STKDataSource.m in Sources */,
 				A1A49975189E744500E2A2E2 /* StreamingKitMac.m in Sources */,
@@ -497,12 +562,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E7C501188D5E550010896F /* STKCoreFoundationDataSource.m in Sources */,
+				1ACC25D219A6288E00F6B2A7 /* STKEventScheduler.m in Sources */,
+				1A5207081A374BCD00523C31 /* STKMixableQueueEntry.m in Sources */,
+				1AEF08021A37448E00FFFA8F /* STKQueueMixer.m in Sources */,
 				A1E7C4FF188D5E550010896F /* STKAudioPlayer.m in Sources */,
+				1ACC25D919A64AA500F6B2A7 /* STKHTTPMetadataSource.m in Sources */,
 				A1E7C505188D5E550010896F /* STKLocalFileDataSource.m in Sources */,
 				A1BF65D2189A6582004DD08C /* STKQueueEntry.m in Sources */,
 				A1E7C504188D5E550010896F /* STKHTTPDataSource.m in Sources */,
 				A1E7C503188D5E550010896F /* STKDataSourceWrapper.m in Sources */,
 				A1E7C502188D5E550010896F /* STKDataSource.m in Sources */,
+				1ADB86AA1BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.m in Sources */,
 				A1BF65D5189A65C6004DD08C /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				A1E7C500188D5E550010896F /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 			);
@@ -554,6 +624,7 @@
 		A1A49988189E744500E2A2E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -567,6 +638,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/StreamingKit;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -574,6 +646,7 @@
 		A1A49989189E744500E2A2E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -584,6 +657,7 @@
 				GCC_PREFIX_HEADER = "StreamingKitMac/StreamingKitMac-Prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/StreamingKit;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -711,6 +785,7 @@
 				GCC_PREFIX_HEADER = "StreamingKit/StreamingKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/StreamingKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -727,6 +802,7 @@
 				GCC_PREFIX_HEADER = "StreamingKit/StreamingKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/StreamingKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -1,7 +1,8 @@
-/**********************************************************************************
- AudioPlayer.m
+/******************************************************************************
+ STKEventScheduler.h
+ StreamingKit
  
- Created by Thong Nguyen on 14/05/2012.
+ Created by James Gordon on 21/08/2014.
  https://github.com/tumtumtum/audjustable
  
  Copyright (c) 2012 Thong Nguyen (tumtumtum@gmail.com). All rights reserved.
@@ -30,31 +31,10 @@
  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- **********************************************************************************/
+ ******************************************************************************/
 
-#import "STKCoreFoundationDataSource.h"
+#import <Foundation/Foundation.h>
 
-@class STKHTTPDataSource;
-
-typedef void(^STKURLBlock)(NSURL* url);
-typedef NSURL*(^STKURLProvider)();
-typedef void(^STKAsyncURLProvider)(STKHTTPDataSource* dataSource, BOOL forSeek, STKURLBlock callback);
-
-@interface STKHTTPDataSource : STKCoreFoundationDataSource {
-    @protected
-        SInt64 requestedStartOffset;
-        STKAsyncURLProvider asyncUrlProvider;
-}
-
-@property (readonly, retain) NSURL* url;
-@property (readonly) UInt32 httpStatusCode;
-
-+(AudioFileTypeID) audioFileTypeHintFromMimeType:(NSString*)fileExtension;
--(id) initWithURL:(NSURL*)url;
--(id) initWithURL:(NSURL *)url httpRequestHeaders:(NSDictionary *)httpRequestHeaders;
--(id) initWithURLProvider:(STKURLProvider)urlProvider;
--(id) initWithAsyncURLProvider:(STKAsyncURLProvider)asyncUrlProvider;
--(NSRunLoop*) eventsRunLoop;
--(void) reconnect;
+@interface STKEventScheduler : NSObject
 
 @end
