@@ -18,6 +18,39 @@
 		1ADB86AA1BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB86A81BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.m */; };
 		1AEF08011A37448E00FFFA8F /* STKQueueMixer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AEF07FF1A37448E00FFFA8F /* STKQueueMixer.h */; };
 		1AEF08021A37448E00FFFA8F /* STKQueueMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF08001A37448E00FFFA8F /* STKQueueMixer.m */; };
+		33A780CA203DC828003BC375 /* StreamingKit_Carthage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A780C1203DC828003BC375 /* StreamingKit_Carthage.framework */; };
+		33A780CF203DC828003BC375 /* StreamingKit_CarthageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A780CE203DC828003BC375 /* StreamingKit_CarthageTests.swift */; };
+		33A780D1203DC828003BC375 /* StreamingKit_Carthage.h in Headers */ = {isa = PBXBuildFile; fileRef = 33A780C3203DC828003BC375 /* StreamingKit_Carthage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33A780DA203DC848003BC375 /* STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F1188D5E550010896F /* STKAudioPlayer.h */; };
+		33A780DB203DC848003BC375 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E7C4F2188D5E550010896F /* STKAudioPlayer.m */; };
+		33A780DC203DC848003BC375 /* STKAutoRecoveringHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F3188D5E550010896F /* STKAutoRecoveringHTTPDataSource.h */; };
+		33A780DD203DC848003BC375 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E7C4F4188D5E550010896F /* STKAutoRecoveringHTTPDataSource.m */; };
+		33A780DE203DC848003BC375 /* STKCoreFoundationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F5188D5E550010896F /* STKCoreFoundationDataSource.h */; };
+		33A780DF203DC848003BC375 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E7C4F6188D5E550010896F /* STKCoreFoundationDataSource.m */; };
+		33A780E0203DC848003BC375 /* STKDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F7188D5E550010896F /* STKDataSource.h */; };
+		33A780E1203DC848003BC375 /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E7C4F8188D5E550010896F /* STKDataSource.m */; };
+		33A780E2203DC848003BC375 /* STKDataSourceWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F9188D5E550010896F /* STKDataSourceWrapper.h */; };
+		33A780E3203DC848003BC375 /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E7C4FA188D5E550010896F /* STKDataSourceWrapper.m */; };
+		33A780E4203DC848003BC375 /* STKHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4FB188D5E550010896F /* STKHTTPDataSource.h */; };
+		33A780E5203DC848003BC375 /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E7C4FC188D5E550010896F /* STKHTTPDataSource.m */; };
+		33A780E6203DC848003BC375 /* STKHTTPMetadataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACC25D619A64AA500F6B2A7 /* STKHTTPMetadataSource.h */; };
+		33A780E7203DC848003BC375 /* STKHTTPMetadataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC25D719A64AA500F6B2A7 /* STKHTTPMetadataSource.m */; };
+		33A780E8203DC848003BC375 /* STKLocalFileDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4FD188D5E550010896F /* STKLocalFileDataSource.h */; };
+		33A780E9203DC848003BC375 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E7C4FE188D5E550010896F /* STKLocalFileDataSource.m */; };
+		33A780EA203DC848003BC375 /* STKQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = A1BF65D0189A6582004DD08C /* STKQueueEntry.h */; };
+		33A780EB203DC848003BC375 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF65D1189A6582004DD08C /* STKQueueEntry.m */; };
+		33A780EC203DC848003BC375 /* STKEventScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACC25CF19A6288E00F6B2A7 /* STKEventScheduler.h */; };
+		33A780ED203DC848003BC375 /* STKEventScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC25D019A6288E00F6B2A7 /* STKEventScheduler.m */; };
+		33A780EE203DC848003BC375 /* NSMutableArray+STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A1BF65D3189A65C6004DD08C /* NSMutableArray+STKAudioPlayer.h */; };
+		33A780EF203DC848003BC375 /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF65D4189A65C6004DD08C /* NSMutableArray+STKAudioPlayer.m */; };
+		33A780F0203DC848003BC375 /* STKQueueMixer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AEF07FF1A37448E00FFFA8F /* STKQueueMixer.h */; };
+		33A780F1203DC848003BC375 /* STKQueueMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF08001A37448E00FFFA8F /* STKQueueMixer.m */; };
+		33A780F2203DC848003BC375 /* STKMixableQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A5207051A374BCD00523C31 /* STKMixableQueueEntry.h */; };
+		33A780F3203DC848003BC375 /* STKMixableQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5207061A374BCD00523C31 /* STKMixableQueueEntry.m */; };
+		33A780F4203DC848003BC375 /* STKConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC30E121A385ACB002AA3D5 /* STKConstants.h */; };
+		33A780F5203DC848003BC375 /* STKAdaptiveURLHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADB86A71BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.h */; };
+		33A780F6203DC848003BC375 /* STKAdaptiveURLHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB86A81BA03FFC00AAF484 /* STKAdaptiveURLHTTPDataSource.m */; };
+		33A780F7203DC848003BC375 /* STKHTTPDataSourceProtected.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADB86AE1BA045AB00AAF484 /* STKHTTPDataSourceProtected.h */; };
 		5B949CD21A1140E4005675A0 /* STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F1188D5E550010896F /* STKAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B949CD31A1140E4005675A0 /* STKAutoRecoveringHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F3188D5E550010896F /* STKAutoRecoveringHTTPDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B949CD41A1140E4005675A0 /* STKCoreFoundationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E7C4F5188D5E550010896F /* STKCoreFoundationDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +92,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		33A780CB203DC828003BC375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1E7C4C0188D57F50010896F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33A780C0203DC828003BC375;
+			remoteInfo = "StreamingKit-Carthage";
+		};
 		A1A4997D189E744500E2A2E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A1E7C4C0188D57F50010896F /* Project object */;
@@ -114,6 +154,12 @@
 		1ADB86AE1BA045AB00AAF484 /* STKHTTPDataSourceProtected.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STKHTTPDataSourceProtected.h; sourceTree = "<group>"; };
 		1AEF07FF1A37448E00FFFA8F /* STKQueueMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueMixer.h; sourceTree = "<group>"; };
 		1AEF08001A37448E00FFFA8F /* STKQueueMixer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueMixer.m; sourceTree = "<group>"; };
+		33A780C1203DC828003BC375 /* StreamingKit_Carthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StreamingKit_Carthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A780C3203DC828003BC375 /* StreamingKit_Carthage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreamingKit_Carthage.h; sourceTree = "<group>"; };
+		33A780C4203DC828003BC375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A780C9203DC828003BC375 /* StreamingKit-CarthageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StreamingKit-CarthageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A780CE203DC828003BC375 /* StreamingKit_CarthageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingKit_CarthageTests.swift; sourceTree = "<group>"; };
+		33A780D0203DC828003BC375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1A49969189E744400E2A2E2 /* libStreamingKitMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStreamingKitMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A4996A189E744400E2A2E2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		A1A4996D189E744500E2A2E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,6 +205,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33A780BD203DC828003BC375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A780C6203DC828003BC375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A780CA203DC828003BC375 /* StreamingKit_Carthage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1A49966189E744400E2A2E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +258,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33A780C2203DC828003BC375 /* StreamingKit-Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				33A780C3203DC828003BC375 /* StreamingKit_Carthage.h */,
+				33A780C4203DC828003BC375 /* Info.plist */,
+			);
+			path = "StreamingKit-Carthage";
+			sourceTree = "<group>";
+		};
+		33A780CD203DC828003BC375 /* StreamingKit-CarthageTests */ = {
+			isa = PBXGroup;
+			children = (
+				33A780CE203DC828003BC375 /* StreamingKit_CarthageTests.swift */,
+				33A780D0203DC828003BC375 /* Info.plist */,
+			);
+			path = "StreamingKit-CarthageTests";
+			sourceTree = "<group>";
+		};
 		A1A4996C189E744500E2A2E2 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +338,8 @@
 				A1E7C4E1188D57F60010896F /* StreamingKitTests */,
 				A1A49970189E744500E2A2E2 /* StreamingKitMac */,
 				A1A49980189E744500E2A2E2 /* StreamingKitMacTests */,
+				33A780C2203DC828003BC375 /* StreamingKit-Carthage */,
+				33A780CD203DC828003BC375 /* StreamingKit-CarthageTests */,
 				A1E7C4CA188D57F50010896F /* Frameworks */,
 				A1E7C4C9188D57F50010896F /* Products */,
 				A1A499E1189E769A00E2A2E2 /* ExampleAppMac.xcodeproj */,
@@ -272,6 +353,8 @@
 				A1E7C4D8188D57F60010896F /* StreamingKitTests.xctest */,
 				A1A49969189E744400E2A2E2 /* libStreamingKitMac.a */,
 				A1A4997A189E744500E2A2E2 /* StreamingKitMacTests.xctest */,
+				33A780C1203DC828003BC375 /* StreamingKit_Carthage.framework */,
+				33A780C9203DC828003BC375 /* StreamingKit-CarthageTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -357,6 +440,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		33A780BE203DC828003BC375 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A780E4203DC848003BC375 /* STKHTTPDataSource.h in Headers */,
+				33A780E8203DC848003BC375 /* STKLocalFileDataSource.h in Headers */,
+				33A780F5203DC848003BC375 /* STKAdaptiveURLHTTPDataSource.h in Headers */,
+				33A780E6203DC848003BC375 /* STKHTTPMetadataSource.h in Headers */,
+				33A780DE203DC848003BC375 /* STKCoreFoundationDataSource.h in Headers */,
+				33A780EC203DC848003BC375 /* STKEventScheduler.h in Headers */,
+				33A780F2203DC848003BC375 /* STKMixableQueueEntry.h in Headers */,
+				33A780EA203DC848003BC375 /* STKQueueEntry.h in Headers */,
+				33A780DC203DC848003BC375 /* STKAutoRecoveringHTTPDataSource.h in Headers */,
+				33A780EE203DC848003BC375 /* NSMutableArray+STKAudioPlayer.h in Headers */,
+				33A780F7203DC848003BC375 /* STKHTTPDataSourceProtected.h in Headers */,
+				33A780E2203DC848003BC375 /* STKDataSourceWrapper.h in Headers */,
+				33A780F0203DC848003BC375 /* STKQueueMixer.h in Headers */,
+				33A780D1203DC828003BC375 /* StreamingKit_Carthage.h in Headers */,
+				33A780E0203DC848003BC375 /* STKDataSource.h in Headers */,
+				33A780DA203DC848003BC375 /* STKAudioPlayer.h in Headers */,
+				33A780F4203DC848003BC375 /* STKConstants.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B949CD11A1140CF005675A0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,6 +494,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		33A780C0203DC828003BC375 /* StreamingKit-Carthage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A780D8203DC828003BC375 /* Build configuration list for PBXNativeTarget "StreamingKit-Carthage" */;
+			buildPhases = (
+				33A780BC203DC828003BC375 /* Sources */,
+				33A780BD203DC828003BC375 /* Frameworks */,
+				33A780BE203DC828003BC375 /* Headers */,
+				33A780BF203DC828003BC375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StreamingKit-Carthage";
+			productName = "StreamingKit-Carthage";
+			productReference = 33A780C1203DC828003BC375 /* StreamingKit_Carthage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		33A780C8203DC828003BC375 /* StreamingKit-CarthageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33A780D9203DC828003BC375 /* Build configuration list for PBXNativeTarget "StreamingKit-CarthageTests" */;
+			buildPhases = (
+				33A780C5203DC828003BC375 /* Sources */,
+				33A780C6203DC828003BC375 /* Frameworks */,
+				33A780C7203DC828003BC375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33A780CC203DC828003BC375 /* PBXTargetDependency */,
+			);
+			name = "StreamingKit-CarthageTests";
+			productName = "StreamingKit-CarthageTests";
+			productReference = 33A780C9203DC828003BC375 /* StreamingKit-CarthageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A1A49968189E744400E2A2E2 /* StreamingKitMac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1A4998C189E744500E2A2E2 /* Build configuration list for PBXNativeTarget "StreamingKitMac" */;
@@ -465,8 +608,21 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = STK;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Thong Nguyen";
+				TargetAttributes = {
+					33A780C0203DC828003BC375 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 84774C7U7M;
+						ProvisioningStyle = Automatic;
+					};
+					33A780C8203DC828003BC375 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 84774C7U7M;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = A1E7C4C3188D57F50010896F /* Build configuration list for PBXProject "StreamingKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -490,6 +646,8 @@
 				A1E7C4D7188D57F60010896F /* StreamingKitTests */,
 				A1A49968189E744400E2A2E2 /* StreamingKitMac */,
 				A1A49979189E744500E2A2E2 /* StreamingKitMacTests */,
+				33A780C0203DC828003BC375 /* StreamingKit-Carthage */,
+				33A780C8203DC828003BC375 /* StreamingKit-CarthageTests */,
 			);
 		};
 /* End PBXProject section */
@@ -512,6 +670,20 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33A780BF203DC828003BC375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A780C7203DC828003BC375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1A49978189E744500E2A2E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,6 +703,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33A780BC203DC828003BC375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A780E3203DC848003BC375 /* STKDataSourceWrapper.m in Sources */,
+				33A780ED203DC848003BC375 /* STKEventScheduler.m in Sources */,
+				33A780F3203DC848003BC375 /* STKMixableQueueEntry.m in Sources */,
+				33A780DD203DC848003BC375 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				33A780DB203DC848003BC375 /* STKAudioPlayer.m in Sources */,
+				33A780E9203DC848003BC375 /* STKLocalFileDataSource.m in Sources */,
+				33A780E5203DC848003BC375 /* STKHTTPDataSource.m in Sources */,
+				33A780E7203DC848003BC375 /* STKHTTPMetadataSource.m in Sources */,
+				33A780DF203DC848003BC375 /* STKCoreFoundationDataSource.m in Sources */,
+				33A780E1203DC848003BC375 /* STKDataSource.m in Sources */,
+				33A780EF203DC848003BC375 /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				33A780F6203DC848003BC375 /* STKAdaptiveURLHTTPDataSource.m in Sources */,
+				33A780F1203DC848003BC375 /* STKQueueMixer.m in Sources */,
+				33A780EB203DC848003BC375 /* STKQueueEntry.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33A780C5203DC828003BC375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A780CF203DC828003BC375 /* StreamingKit_CarthageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1A49965189E744400E2A2E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,6 +790,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		33A780CC203DC828003BC375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33A780C0203DC828003BC375 /* StreamingKit-Carthage */;
+			targetProxy = 33A780CB203DC828003BC375 /* PBXContainerItemProxy */;
+		};
 		A1A4997E189E744500E2A2E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A1A49968189E744400E2A2E2 /* StreamingKitMac */;
@@ -621,6 +827,178 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		33A780D2203DC828003BC375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 84774C7U7M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "StreamingKit-Carthage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thisisglobal.StreamingKit-Carthage";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		33A780D3203DC828003BC375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 84774C7U7M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "StreamingKit-Carthage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thisisglobal.StreamingKit-Carthage";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		33A780D4203DC828003BC375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 84774C7U7M;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "StreamingKit-CarthageTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thisisglobal.StreamingKit-CarthageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33A780D5203DC828003BC375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 84774C7U7M;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "StreamingKit-CarthageTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thisisglobal.StreamingKit-CarthageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A1A49988189E744500E2A2E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -846,6 +1224,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33A780D8203DC828003BC375 /* Build configuration list for PBXNativeTarget "StreamingKit-Carthage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A780D2203DC828003BC375 /* Debug */,
+				33A780D3203DC828003BC375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33A780D9203DC828003BC375 /* Build configuration list for PBXNativeTarget "StreamingKit-CarthageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33A780D4203DC828003BC375 /* Debug */,
+				33A780D5203DC828003BC375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A1A4998C189E744500E2A2E2 /* Build configuration list for PBXNativeTarget "StreamingKitMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
