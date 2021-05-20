@@ -48,7 +48,6 @@
     BOOL iceHeaderAvailable;
     BOOL httpHeaderNotAvailable;
 
-    NSURL* redirectUrl;
     NSURL* currentUrl;
     NSDictionary* httpHeaders;
     AudioFileTypeID audioFileTypeHint;
@@ -94,6 +93,8 @@
         
         audioFileTypeHint = [STKLocalFileDataSource audioFileTypeHintFromFileExtension:self->currentUrl.pathExtension];
     }
+    
+    NSLog(@"STKHTTPDataSource init");
     
     return self;
 }
@@ -206,15 +207,11 @@
 
 -(BOOL) parseHttpHeader
 {
+    NSURL *redirectUrl = nil;
     if (!httpHeaderNotAvailable)
     {
         CFTypeRef response = CFReadStreamCopyProperty(stream, kCFStreamPropertyHTTPResponseHeader);
-        NSURL *finalUrl = (__bridge_transfer NSURL*)CFReadStreamCopyProperty(stream, kCFStreamPropertyHTTPFinalURL);
-        
-        if (finalUrl)
-        {
-            self->redirectUrl = finalUrl;
-        }
+        redirectUrl = (__bridge_transfer NSURL*)CFReadStreamCopyProperty(stream, kCFStreamPropertyHTTPFinalURL);
         
         if (response)
         {
