@@ -94,8 +94,6 @@
         audioFileTypeHint = [STKLocalFileDataSource audioFileTypeHintFromFileExtension:self->currentUrl.pathExtension];
     }
     
-    NSLog(@"STKHTTPDataSource init");
-    
     return self;
 }
 
