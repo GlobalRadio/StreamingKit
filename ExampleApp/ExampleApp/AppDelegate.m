@@ -24,33 +24,32 @@
 -(BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     NSError* error;
+    Float32 bufferLength = 0.1;
     
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
-	[[AVAudioSession sharedInstance] setActive:YES error:&error];
-    
-    Float32 bufferLength = 0.1;
-    AudioSessionSetProperty(kAudioSessionProperty_PreferredHardwareIOBufferDuration, sizeof(bufferLength), &bufferLength);
+    [[AVAudioSession sharedInstance] setPreferredIOBufferDuration:bufferLength error:&error];
+    [[AVAudioSession sharedInstance] setActive:YES error:&error];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[UIViewController alloc] init];
     
-	self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     
-	audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){ .flushQueueOnSeek = YES, .enableVolumeMixer = NO, .equalizerBandFrequencies = {50, 100, 200, 400, 800, 1600, 2600, 16000} }];
-	audioPlayer.meteringEnabled = YES;
-	audioPlayer.volume = 1;
+    audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){ .flushQueueOnSeek = YES, .enableVolumeMixer = NO, .equalizerBandFrequencies = {50, 100, 200, 400, 800, 1600, 2600, 16000} }];
+    audioPlayer.meteringEnabled = YES;
+    audioPlayer.volume = 1;
     
-	
-	AudioPlayerView* audioPlayerView = [[AudioPlayerView alloc] initWithFrame:self.window.bounds andAudioPlayer:audioPlayer];
+    AudioPlayerView* audioPlayerView = [[AudioPlayerView alloc] initWithFrame:self.window.bounds andAudioPlayer:audioPlayer];
     
-	audioPlayerView.delegate = self;
+    audioPlayerView.delegate = self;
     
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
-	
-	[self.window addSubview:audioPlayerView];
-	
+    
     [self.window makeKeyAndVisible];
-	
+    
+    [self.window.rootViewController.view addSubview:audioPlayerView];
+    
     return YES;
 }
 
