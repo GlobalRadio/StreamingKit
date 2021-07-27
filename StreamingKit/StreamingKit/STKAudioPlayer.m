@@ -247,6 +247,7 @@ static AudioStreamBasicDescription canonicalAudioStreamBasicDescription;
     
     char lastFileFormat[4];
     char *fileFormatM4A;
+    char *fileFormatMp4;
 }
 
 @property (readwrite) STKAudioPlayerInternalState internalState;
@@ -498,6 +499,7 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
         bufferingQueue = [[NSMutableArray alloc] init];
         
         fileFormatM4A = "fa4m";
+        fileFormatMp4 = "f4pm";
 
 		[self resetPcmBuffers];
         [self createAudioGraph];
@@ -856,9 +858,9 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
                     entryToUpdate->packetBufferSize = packetBufferSize;
                 }
                 
-                // Delay createAudioConverter when the format is .m4a because DataFormat update happens before FormatList
+                // Delay createAudioConverter when the format is .m4a or .mp4 because DataFormat update happens before FormatList
                 // In that case the creation will happen in FormatList update
-                if (strcmp(fileFormatM4A, lastFileFormat) != 0) {
+                if (strcmp(fileFormatM4A, lastFileFormat) != 0 || strcmp(fileFormatMp4, lastFileFormat) != 0) {
                     [self createAudioConverter:&currentlyReadingEntry->audioStreamBasicDescription];
                 }
                 
@@ -923,7 +925,7 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
             free(formatList);
             
             // Calling createAudioConverter here when format is .m4a as it was delayed from DataFormat update
-            if (strcmp(fileFormatM4A, lastFileFormat) == 0) {
+            if (strcmp(fileFormatM4A, lastFileFormat) == 0 || strcmp(fileFormatMp4, lastFileFormat) == 0) {
                 pthread_mutex_lock(&playerMutex);
                 [self createAudioConverter:&currentlyReadingEntry->audioStreamBasicDescription];
                 pthread_mutex_unlock(&playerMutex);
