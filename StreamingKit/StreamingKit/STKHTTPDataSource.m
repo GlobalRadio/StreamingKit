@@ -308,7 +308,10 @@
         self->iceHeaderData = nil;
     }
     
-    if (([httpHeaders objectForKey:@"Accept-Ranges"] ?: [httpHeaders objectForKey:@"accept-ranges"]) != nil)
+    NSString *accessControlAllowHeaders = ([httpHeaders objectForKey:@"Access-Control-Allow-Headers"] ?: [httpHeaders objectForKey:@"access-control-allow-headers"]);
+    if (([httpHeaders objectForKey:@"Accept-Ranges"] ?: [httpHeaders objectForKey:@"accept-ranges"]) != nil ||
+         (accessControlAllowHeaders != nil &&
+         ([accessControlAllowHeaders rangeOfString:@"Range"].location != NSNotFound || [accessControlAllowHeaders rangeOfString:@"range"].location != NSNotFound)))
     {
         self->supportsSeek = YES;
     }
