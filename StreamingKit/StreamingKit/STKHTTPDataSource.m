@@ -312,7 +312,7 @@
     {
         self->supportsSeek = YES;
     }
-    
+
     if (self.httpStatusCode == 200)
     {
         if (seekStart == 0)
@@ -339,6 +339,8 @@
         {
             fileLength = [[components objectAtIndex:1] integerValue];
         }
+
+        self->supportsSeek = YES;
     }
     else if (self.httpStatusCode == 416)
     {
@@ -503,7 +505,7 @@
 
 -(void) openForSeek:(BOOL)forSeek
 {
-    
+
     @synchronized (self) {
         int localRequestSerialNumber;
         
@@ -529,8 +531,10 @@
                              if (seekStart > 0 && supportsSeek)
                              {
                                  CFHTTPMessageSetHeaderFieldValue(message, CFSTR("Range"), (__bridge CFStringRef)[NSString stringWithFormat:@"bytes=%lld-", seekStart]);
-                                 
+
                                  discontinuous = YES;
+                             } else {
+                                 CFHTTPMessageSetHeaderFieldValue(message, CFSTR("Range"), (__bridge CFStringRef)[NSString stringWithFormat:@"bytes=0-1"]);
                              }
                              
                              for (NSString* key in self->requestHeaders)
