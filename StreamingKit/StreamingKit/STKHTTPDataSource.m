@@ -341,8 +341,6 @@
             fileLength = [[components objectAtIndex:1] integerValue];
         }
 
-        NSLog(@"🧵 supports seek through 206");
-
         self->supportsSeek = YES;
     }
     else if (self.httpStatusCode == 416)
@@ -536,7 +534,7 @@
                                  CFHTTPMessageSetHeaderFieldValue(message, CFSTR("Range"), (__bridge CFStringRef)[NSString stringWithFormat:@"bytes=%lld-", seekStart]);
 
                                  discontinuous = YES;
-                             } else {
+                             } else if (seekStart == 0) {
                                  CFHTTPMessageSetHeaderFieldValue(message, CFSTR("Range"), (__bridge CFStringRef)[NSString stringWithFormat:@"bytes=0-1"]);
                              }
                              
