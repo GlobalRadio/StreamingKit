@@ -307,8 +307,9 @@
         
         self->iceHeaderData = nil;
     }
-    
-    if (([httpHeaders objectForKey:@"Accept-Ranges"] ?: [httpHeaders objectForKey:@"accept-ranges"]) != nil)
+
+    NSString* range = ([httpHeaders objectForKey:@"Accept-Ranges"] ?: [httpHeaders objectForKey:@"accept-ranges"]);
+    if (range != nil && ![[range lowercaseString] isEqualToString: @"none"])
     {
         self->supportsSeek = YES;
     }
@@ -339,6 +340,8 @@
         {
             fileLength = [[components objectAtIndex:1] integerValue];
         }
+
+        NSLog(@"🧵 supports seek through 206");
 
         self->supportsSeek = YES;
     }
