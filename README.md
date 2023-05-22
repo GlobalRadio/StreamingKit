@@ -22,7 +22,19 @@ The primary motivation of this project was to decouple the input data sources fr
 
 ## Installation
 
-StreamingKit is available as a [Cocoapod](http://cocoapods.org/?q=StreamingKit). You can also simply copy all the source files located inside StreamingKit/StreamingKit/* into your Xcode project.
+### Swift Package Manager
+
+* File > Swift Packages > Add Package Dependency
+* Add https://github.com/GlobalRadio/StreamingKit
+* Select "Up to Next Minor" with "2.4.25"
+
+### CocoaPods
+
+* pod 'StreamingKit', :git => 'https://github.com/GlobalRadio/StreamingKit.git'
+
+### Manual
+
+* You can also simply copy all the source files located inside StreamingKit/StreamingKit/* into your Xcode project.
 
 ## Example
 
