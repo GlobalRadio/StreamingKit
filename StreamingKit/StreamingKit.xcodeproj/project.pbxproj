@@ -473,6 +473,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = A1E7C4BF188D57F50010896F;
@@ -678,7 +679,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "StreamingKitMacTests/StreamingKitMacTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
@@ -698,7 +699,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StreamingKitMac/StreamingKitMac-Prefix.pch";
 				INFOPLIST_FILE = "StreamingKitMacTests/StreamingKitMacTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xctest;
@@ -783,6 +784,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StreamingKit/StreamingKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include/StreamingKit;
@@ -800,6 +802,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StreamingKit/StreamingKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include/StreamingKit;
@@ -822,6 +825,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "StreamingKitTests/StreamingKitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -838,6 +842,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StreamingKit/StreamingKit-Prefix.pch";
 				INFOPLIST_FILE = "StreamingKitTests/StreamingKitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
