@@ -2814,9 +2814,7 @@ static OSStatus OutputRenderCallback(void* inRefCon, AudioUnitRenderActionFlags*
         OSSpinLockUnlock(&audioPlayer->currentEntryReferencesLock);
        
         if (lastFramePlayed && entry == currentlyPlayingEntry)
-        {
-            [audioPlayer stopAudioUnitWithReason:STKAudioPlayerStopReasonEof];
-            
+        {   
             [audioPlayer audioQueueFinishedPlaying:entry];
             
             while (extraFramesPlayedNotAssigned > 0)
