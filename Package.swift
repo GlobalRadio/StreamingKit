@@ -5,7 +5,7 @@ let package = Package(
     name: "StreamingKit",
     platforms: [
         .iOS(.v10),
-        .tvOS(.v12)
+        .tvOS(.v27.2)
     ],
     products: [
         .library(
