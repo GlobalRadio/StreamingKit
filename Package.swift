@@ -4,7 +4,8 @@ import PackageDescription
 let package = Package(
     name: "StreamingKit",
     platforms: [
-        .iOS(.v10)
+        .iOS(.v10),
+        .tvOS("27.2")
     ],
     products: [
         .library(
